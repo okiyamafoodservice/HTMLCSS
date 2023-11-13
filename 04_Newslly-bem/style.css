@@ -19,6 +19,7 @@ a {
 
 header {
   padding: 30px 0;
+  margin-bottom: 60px;
 }
 
 header img {
@@ -123,4 +124,58 @@ footer {
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
+}
+
+/* info */
+
+.info__inner {
+  max-width: 800px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parts__title.info {
+  color: #202124;
+}
+
+.unit__text.info {
+  padding-top: 15px;
+  border-top: 1px solid #dddddd;
+}
+
+.unit__btn.info {
+  background-color: #202124;
+}
+
+/* discovery */
+
+.discovery {
+  margin-top: 60px;
+  background-color: #f6f6f6;
+}
+.discovery__inner {
+  padding: 60px 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+}
+
+.card__text {
+  background-color: #fff;
+  padding: 35px;
+}
+
+.parts__title.card {
+  color: #202124;
+  width: fit-content;
 }
