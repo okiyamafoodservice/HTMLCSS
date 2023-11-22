@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+body {
+  font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 14px;
+  line-height: (24/14);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+$color-title-gray: #898989;
+$color-bg-cream: #FDF8EB;
+$color-bg-pink: #E40065;
+$color-title-wh: #fff;
+
+@mixin inner($w: 73%, $mw: 1600px) {
+  width: $w;
+  max-width: $mw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+  display: flex;
+  justify-content: $j;
+  flex-wrap: wrap;
+  align-items: $a;
+}
+
+@mixin py($y: 80px) {
+  padding-top: $y;
+  padding-bottom: $y;
+}
+
+.header {
+  padding-bottom: 100px;
+
+  &__inner {
+    @include inner();
+  }
+
+  &__top {
+    @include flex();
+    @include py();
+  }
+
+  &__menu {
+    ul {
+      @include flex();
+
+      li {
+        margin-right: 30px;
+
+        a {
+          font-weight: bold;
+          color: #000;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+
+  .mainvisual {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.works {
+  &__inner {
+    @include inner();
+    padding-bottom: 60px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    line-height: (12/20);
+    color: $color-title-gray;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 38px;
+    line-height: (38/49);
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 30px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 120px;
+      height: 1px;
+      bottom: 0px;
+      left: 0;
+      background-color: #000;
+    }
+  }
+
+  &__text {
+    padding-top: 90px;
+  }
+
+  .en {
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.05em;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    @include flex();
+  }
+
+  .card {
+    &__title {
+      font-size: 20px;
+      @include py(20px);
+      letter-spacing: 0.05em;
+      line-height: (20/26);
+    }
+
+    &__text {
+      font-size: 12px;
+      letter-spacing: (12/20);
+      line-height: 0.05em;
+      color: $color-title-gray;
+    }
+  }
+}
+
+.project {
+  background-color: $color-bg-cream ;
+  @include py(100px);
+
+  &__inner {
+    @include inner();
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    line-height: (20/12);
+    color: $color-title-gray;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 38px;
+    line-height: (49/38);
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 30px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 120px;
+      height: 1px;
+      bottom: 0px;
+      left: 0;
+      background-color: #000;
+    }
+  }
+
+  &__text {
+    padding-top: 90px;
+  }
+
+  .en {
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.05em;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    @include flex();
+  }
+
+  .card {
+    width: (560/1170)*100%;
+
+    &__title {
+      background-color: $color-bg-pink;
+      color: $color-title-wh;
+      width: fit-content;
+      padding: 5px 13px;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: (34/20);
+      letter-spacing: 0.05;
+      font-weight: normal;
+    }
+  }
+}
+
+.footer {
+  &__inner {
+    @include inner();
+    padding: 78px 0 200px;
+  }
+
+  small {
+    color: $color-title-gray;
+    text-align: right;
+    display: block;
+  }
+}
+
+/*                                                         
+                                                        
+                                                        
+  ■■■■   ■■■■   ■■■■  ■■    ■■■   ■ ■■■   ■ ■■■  ■■   ■ 
+ ■■  ■  ■■  ■■  ■■  ■■  ■  ■   ■  ■■  ■■  ■■  ■■  ■   ■ 
+ ■      ■    ■  ■   ■   ■      ■  ■    ■  ■    ■  ■  ■  
+ ■      ■    ■  ■   ■   ■  ■■■■■  ■    ■  ■    ■   ■ ■  
+ ■      ■    ■  ■   ■   ■  ■   ■  ■    ■  ■    ■   ■■■  
+ ■■  ■  ■■  ■■  ■   ■   ■  ■  ■■  ■■  ■■  ■    ■   ■■   
+  ■■■■   ■■■■   ■   ■   ■  ■■■■■  ■■■■■   ■    ■    ■   
+                                  ■                ■    
+                                  ■               ■■    
+                                  ■                     */
