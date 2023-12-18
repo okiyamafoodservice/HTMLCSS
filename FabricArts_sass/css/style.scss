@@ -23,8 +23,8 @@ ul {
 }
 
 $color-title-gray: #898989;
-$color-bg-cream: #FDF8EB;
-$color-bg-pink: #E40065;
+$color-bg-cream: #fdf8eb;
+$color-bg-pink: #e40065;
 $color-title-wh: #fff;
 
 @mixin inner($w: 73%, $mw: 1600px) {
@@ -146,7 +146,7 @@ $color-title-wh: #fff;
 }
 
 .project {
-  background-color: $color-bg-cream ;
+  background-color: $color-bg-cream;
   @include py(100px);
 
   &__inner {
@@ -196,7 +196,7 @@ $color-title-wh: #fff;
   }
 
   .card {
-    width: (560/1170)*100%;
+    width: (560/1170) * 100%;
 
     &__title {
       background-color: $color-bg-pink;
@@ -244,7 +244,6 @@ $color-title-wh: #fff;
                                   ■                     */
 
 .company {
-
   &__inner {
     @include inner();
     padding-bottom: 60px;
@@ -279,7 +278,7 @@ $color-title-wh: #fff;
   }
 
   .unit {
-    width: (700/1170)*100%;
+    width: (700/1170) * 100%;
 
     &__text {
       padding-top: 90px;
@@ -291,8 +290,6 @@ $color-title-wh: #fff;
       letter-spacing: 0.05em;
       margin-bottom: 60px;
     }
-
-
   }
 }
 
@@ -336,7 +333,5 @@ $color-title-wh: #fff;
       line-height: (24/14);
       letter-spacing: 0.05em;
     }
-
-
   }
 }

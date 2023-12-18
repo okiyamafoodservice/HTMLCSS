@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+$bg-white: #fff;
+$color-black: #32353c;
+$color-gold: #b79b6c;
+
+$breakpoints: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 800px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin flex($a: center, $j: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin inner($w: 88%, $mw: 1200) {
+  width: $w;
+  max-width: $mw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  padding-bottom: (600em/16);
+  margin-bottom: (84em/16);
+  background: url(./images/bg_home.png) no-repeat center center/cover;
+
+  @include mq(md) {
+    padding-bottom: (800em/16);
+    margin-bottom: (96em/16);
+  }
+
+  &__inner {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+  }
+
+  &__top {
+    padding: (32em/16) 0;
+    @include inner();
+    a {
+      display: block;
+      width: (193em/16);
+    }
+    @include flex();
+  }
+
+  .list {
+    display: flex;
+
+    &__content {
+      a {
+        width: fit-content;
+        margin-left: (32em/16);
+        font-weight: bold;
+        color: $color-black;
+      }
+    }
+  }
+
+  &__content {
+    margin-left: (32em/16);
+    font-size: (16rem/27);
+    font-weight: bold;
+  }
+}
+
+.collection {
+  &__inner {
+    @include inner();
+
+    .unit {
+      &__sub {
+        font-size: (14rem/16);
+        line-height: (14em/24);
+        padding-bottom: (14em/28);
+      }
+
+      &__title {
+        font-size: (32rem/16);
+        padding-bottom: (42em/16);
+
+        span {
+          color: $color-gold;
+        }
+      }
+
+      &__btn {
+        display: block;
+        padding: (21em/16) (46em/16);
+        margin-bottom: (56em/16);
+        background-color: $color-black;
+        color: $bg-white;
+        width: fit-content;
+      }
+
+      &__area {
+        @include flex();
+        .card {
+          width: (370/900) * 100%;
+          position: relative;
+
+          &__image {
+            width: 100%;
+          }
+
+          &__status {
+            padding: (14em/16) (32em/16);
+            background-color: $color-gold;
+            width: fit-content;
+            color: $bg-white;
+            position: absolute;
+            top: (21em/16);
+            left: (21em/16);
+            border-radius: 3px;
+          }
+
+          &__sub {
+            margin-top: (28m/16);
+            padding-bottom: (21em/16);
+          }
+        }
+      }
+    }
+  }
+}
